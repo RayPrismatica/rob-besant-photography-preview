@@ -323,10 +323,10 @@ const BlogPage = () => {
                     transition: 'border-bottom 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.borderBottom = '1px solid #2c3e50'
+                    (e.target as HTMLElement).style.borderBottom = '1px solid #2c3e50'
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.borderBottom = '1px solid transparent'
+                    (e.target as HTMLElement).style.borderBottom = '1px solid transparent'
                   }}
                 >
                   Read More →
