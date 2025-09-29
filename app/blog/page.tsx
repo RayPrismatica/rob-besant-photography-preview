@@ -7,7 +7,7 @@ const BlogPage = () => {
   const [modalImage, setModalImage] = useState(null)
   const [modalAlt, setModalAlt] = useState('')
 
-  const openModal = (src, alt) => {
+  const openModal = (src: string, alt: string) => {
     setModalImage(src)
     setModalAlt(alt)
   }
