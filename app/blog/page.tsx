@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 const BlogPage = () => {
-  const [modalImage, setModalImage] = useState(null)
+  const [modalImage, setModalImage] = useState<string | null>(null)
   const [modalAlt, setModalAlt] = useState('')
 
   const openModal = (src: string, alt: string) => {
