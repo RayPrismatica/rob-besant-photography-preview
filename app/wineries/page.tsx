@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 const WineriesPage = () => {
-  const [modalImage, setModalImage] = useState(null)
+  const [modalImage, setModalImage] = useState<string | null>(null)
   const [modalAlt, setModalAlt] = useState('')
 
-  const openModal = (src, alt) => {
+  const openModal = (src: string, alt: string) => {
     setModalImage(src)
     setModalAlt(alt)
   }
@@ -113,14 +113,14 @@ const WineriesPage = () => {
               }}
               onClick={() => openModal('/images/restaurant.jpg', 'Artisan winemaker examining wine in cellar')}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'scale(1.02)'
+                (e.target as HTMLElement).style.transform = 'scale(1.02)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'scale(1)'
+                (e.target as HTMLElement).style.transform = 'scale(1)';
               }}
               onError={(e) => {
-                e.target.style.display = 'none'
-                e.target.nextSibling.style.display = 'flex'
+                (e.target as HTMLElement).style.display = 'none';
+                ((e.target as HTMLElement).nextSibling as HTMLElement).style.display = 'flex';
               }}
             />
             <div style={{
@@ -337,14 +337,14 @@ const WineriesPage = () => {
               }}
               onClick={() => openModal('/images/gastropub.jpg', 'Craft brewery founder with their signature beer')}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'scale(1.02)'
+                (e.target as HTMLElement).style.transform = 'scale(1.02)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'scale(1)'
+                (e.target as HTMLElement).style.transform = 'scale(1)';
               }}
               onError={(e) => {
-                e.target.style.display = 'none'
-                e.target.nextSibling.style.display = 'flex'
+                (e.target as HTMLElement).style.display = 'none';
+                ((e.target as HTMLElement).nextSibling as HTMLElement).style.display = 'flex';
               }}
             />
             <div style={{
@@ -840,8 +840,8 @@ const WineriesPage = () => {
                   }}
                   onClick={() => openModal(item.src, item.caption)}
                   onError={(e) => {
-                    e.target.style.display = 'none'
-                    e.target.nextSibling.style.display = 'flex'
+                    (e.target as HTMLElement).style.display = 'none';
+                    ((e.target as HTMLElement).nextSibling as HTMLElement).style.display = 'flex';
                   }}
                 />
                 <div style={{
@@ -1046,12 +1046,12 @@ const WineriesPage = () => {
                       cursor: 'pointer'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.background = '#6b5a45'
-                      e.target.style.transform = 'translateY(-2px)'
+                      (e.target as HTMLElement).style.background = '#6b5a45';
+                      (e.target as HTMLElement).style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.background = '#8b7355'
-                      e.target.style.transform = 'translateY(0)'
+                      (e.target as HTMLElement).style.background = '#8b7355';
+                      (e.target as HTMLElement).style.transform = 'translateY(0)';
                     }}
                   >
                     {pkg.cta}
@@ -1118,12 +1118,12 @@ const WineriesPage = () => {
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-2px)'
-                e.target.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)'
+                (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+                (e.target as HTMLElement).style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = 'none'
+                (e.target as HTMLElement).style.transform = 'translateY(0)';
+                (e.target as HTMLElement).style.boxShadow = 'none';
               }}
             >
               Let's Talk Strategy
@@ -1146,12 +1146,12 @@ const WineriesPage = () => {
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255,255,255,0.1)'
-                e.target.style.transform = 'translateY(-2px)'
+                (e.target as HTMLElement).style.background = 'rgba(255,255,255,0.1)';
+                (e.target as HTMLElement).style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent'
-                e.target.style.transform = 'translateY(0)'
+                (e.target as HTMLElement).style.background = 'transparent';
+                (e.target as HTMLElement).style.transform = 'translateY(0)';
               }}
             >
               See More Work
@@ -1219,10 +1219,10 @@ const WineriesPage = () => {
                 transition: 'background 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.2)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent'
+                (e.target as HTMLElement).style.background = 'transparent';
               }}
             >
               ×

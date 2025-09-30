@@ -5,6 +5,9 @@ import Header from './components/Header'
 export const metadata: Metadata = {
   title: 'Rob Besant Photography',
   description: 'Food and hospitality photography',
+  icons: {
+    icon: 'data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==',
+  },
 }
 
 export default function RootLayout({

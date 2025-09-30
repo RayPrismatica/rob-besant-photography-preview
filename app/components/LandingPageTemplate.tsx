@@ -82,11 +82,11 @@ const testimonials = [
 const LandingPage = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [activeTime, setActiveTime] = useState(0);
-  const timelineRef = useRef(null);
-  const [modalImage, setModalImage] = useState(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const [modalImage, setModalImage] = useState<string | null>(null);
   const [modalAlt, setModalAlt] = useState('');
 
-  const openModal = (src, alt) => {
+  const openModal = (src: string, alt: string) => {
     setModalImage(src);
     setModalAlt(alt);
   };
@@ -106,7 +106,7 @@ const LandingPage = () => {
       setTimeout(() => {
         const yOffset = -100;
         const element = timelineRef.current;
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y = element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }, 100);
     }
@@ -930,8 +930,8 @@ const LandingPage = () => {
                 alt="Cosy pub interior with fireplace"
                 style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
                 onClick={() => openModal('/images/hero-venue.jpg', 'Cosy pub interior with fireplace')}
-                onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
-                onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.02)'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
               />
             </div>
           </div>
@@ -991,12 +991,12 @@ const LandingPage = () => {
                     onClick={() => openModal(event.image, event.title)}
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
-                      e.currentTarget.parentElement.style.background = '#f3f4f6';
-                      e.currentTarget.parentElement.style.display = 'flex';
-                      e.currentTarget.parentElement.style.alignItems = 'center';
-                      e.currentTarget.parentElement.style.justifyContent = 'center';
-                      e.currentTarget.parentElement.style.height = '250px';
-                      e.currentTarget.parentElement.innerHTML = '<span style="color: #9ca3af; font-size: 14px;">Image coming soon</span>';
+                      e.currentTarget.parentElement!.style.background = '#f3f4f6';
+                      e.currentTarget.parentElement!.style.display = 'flex';
+                      e.currentTarget.parentElement!.style.alignItems = 'center';
+                      e.currentTarget.parentElement!.style.justifyContent = 'center';
+                      e.currentTarget.parentElement!.style.height = '250px';
+                      e.currentTarget.parentElement!.innerHTML = '<span style="color: #9ca3af; font-size: 14px;">Image coming soon</span>';
                     }}
                   />
                 </div>
@@ -1186,10 +1186,10 @@ const LandingPage = () => {
                 transition: 'background 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.2)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent'
+                (e.target as HTMLElement).style.background = 'transparent';
               }}
             >
               ×

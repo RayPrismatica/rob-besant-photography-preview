@@ -11,10 +11,10 @@ const BookingPage = () => {
     phone: '',
     message: ''
   })
-  const [modalImage, setModalImage] = useState(null)
+  const [modalImage, setModalImage] = useState<string | null>(null)
   const [modalAlt, setModalAlt] = useState('')
 
-  const openModal = (src, alt) => {
+  const openModal = (src: string, alt: string) => {
     setModalImage(src)
     setModalAlt(alt)
   }
@@ -29,7 +29,7 @@ const BookingPage = () => {
     alert('Thanks for your message! Rob will be in touch within 24 hours.')
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -111,8 +111,8 @@ const BookingPage = () => {
                 transition: 'transform 0.3s ease'
               }}
               onClick={() => openModal('/images/rob.jpg', 'Rob Besant Photography - About the photographer')}
-              onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
-              onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.02)'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
             />
           </div>
           <div>
@@ -234,12 +234,12 @@ const BookingPage = () => {
                       transition: 'all 0.3s ease'
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = '#8b7355'
-                      e.target.style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
+                      (e.target as HTMLElement).style.borderColor = '#8b7355';
+                      (e.target as HTMLElement).style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = '#e5e5e5'
-                      e.target.style.boxShadow = 'none'
+                      (e.target as HTMLElement).style.borderColor = '#e5e5e5';
+                      (e.target as HTMLElement).style.boxShadow = 'none';
                     }}
                   />
                 </div>
@@ -273,12 +273,12 @@ const BookingPage = () => {
                       transition: 'all 0.3s ease'
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = '#8b7355'
-                      e.target.style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
+                      (e.target as HTMLElement).style.borderColor = '#8b7355';
+                      (e.target as HTMLElement).style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = '#e5e5e5'
-                      e.target.style.boxShadow = 'none'
+                      (e.target as HTMLElement).style.borderColor = '#e5e5e5';
+                      (e.target as HTMLElement).style.boxShadow = 'none';
                     }}
                   />
                 </div>
@@ -318,12 +318,12 @@ const BookingPage = () => {
                       transition: 'all 0.3s ease'
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = '#8b7355'
-                      e.target.style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
+                      (e.target as HTMLElement).style.borderColor = '#8b7355';
+                      (e.target as HTMLElement).style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = '#e5e5e5'
-                      e.target.style.boxShadow = 'none'
+                      (e.target as HTMLElement).style.borderColor = '#e5e5e5';
+                      (e.target as HTMLElement).style.boxShadow = 'none';
                     }}
                   />
                 </div>
@@ -357,12 +357,12 @@ const BookingPage = () => {
                       transition: 'all 0.3s ease'
                     }}
                     onFocus={(e) => {
-                      e.target.style.borderColor = '#8b7355'
-                      e.target.style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
+                      (e.target as HTMLElement).style.borderColor = '#8b7355';
+                      (e.target as HTMLElement).style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
                     }}
                     onBlur={(e) => {
-                      e.target.style.borderColor = '#e5e5e5'
-                      e.target.style.boxShadow = 'none'
+                      (e.target as HTMLElement).style.borderColor = '#e5e5e5';
+                      (e.target as HTMLElement).style.boxShadow = 'none';
                     }}
                   />
                 </div>
@@ -398,12 +398,12 @@ const BookingPage = () => {
                     resize: 'vertical'
                   }}
                   onFocus={(e) => {
-                    e.target.style.borderColor = '#8b7355'
-                    e.target.style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
+                    (e.target as HTMLElement).style.borderColor = '#8b7355';
+                    (e.target as HTMLElement).style.boxShadow = '0 0 0 3px rgba(139, 115, 85, 0.1)'
                   }}
                   onBlur={(e) => {
-                    e.target.style.borderColor = '#e5e5e5'
-                    e.target.style.boxShadow = 'none'
+                    (e.target as HTMLElement).style.borderColor = '#e5e5e5';
+                    (e.target as HTMLElement).style.boxShadow = 'none';
                   }}
                 />
               </div>
@@ -424,14 +424,14 @@ const BookingPage = () => {
                   marginTop: '10px'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.background = '#75614d'
-                  e.target.style.transform = 'translateY(-2px)'
-                  e.target.style.boxShadow = '0 5px 20px rgba(139, 115, 85, 0.3)'
+                  (e.target as HTMLElement).style.background = '#75614d';
+                  (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+                  (e.target as HTMLElement).style.boxShadow = '0 5px 20px rgba(139, 115, 85, 0.3)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.background = '#8b7355'
-                  e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = 'none'
+                  (e.target as HTMLElement).style.background = '#8b7355';
+                  (e.target as HTMLElement).style.transform = 'translateY(0)';
+                  (e.target as HTMLElement).style.boxShadow = 'none';
                 }}
               >
                 Send Message
@@ -479,14 +479,14 @@ const BookingPage = () => {
                   boxShadow: '0 4px 15px rgba(232, 197, 71, 0.3)'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.background = '#d4b03a'
-                  e.target.style.transform = 'translateY(-2px)'
-                  e.target.style.boxShadow = '0 6px 20px rgba(232, 197, 71, 0.4)'
+                  (e.target as HTMLElement).style.background = '#d4b03a';
+                  (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+                  (e.target as HTMLElement).style.boxShadow = '0 6px 20px rgba(232, 197, 71, 0.4)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.background = '#e8c547'
-                  e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = '0 4px 15px rgba(232, 197, 71, 0.3)'
+                  (e.target as HTMLElement).style.background = '#e8c547';
+                  (e.target as HTMLElement).style.transform = 'translateY(0)';
+                  (e.target as HTMLElement).style.boxShadow = '0 4px 15px rgba(232, 197, 71, 0.3)';
                 }}
               >
                 Find Your Perfect Day →
@@ -759,10 +759,10 @@ const BookingPage = () => {
                 transition: 'background 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.2)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent'
+                (e.target as HTMLElement).style.background = 'transparent';
               }}
             >
               ×

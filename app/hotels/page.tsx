@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 const HotelsPage = () => {
-  const [modalImage, setModalImage] = useState(null)
+  const [modalImage, setModalImage] = useState<string | null>(null)
   const [modalAlt, setModalAlt] = useState('')
 
-  const openModal = (src, alt) => {
+  const openModal = (src: string, alt: string) => {
     setModalImage(src)
     setModalAlt(alt)
   }
@@ -922,8 +922,8 @@ const HotelsPage = () => {
                   alt="Luxury suite with period features"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hotel.jpg', 'Luxury suite with period features')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="room-fallback">Luxury suite with period features</div>';
@@ -941,8 +941,8 @@ const HotelsPage = () => {
                   alt="Boutique hotel restaurant"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/restaurant.jpg', 'Boutique hotel restaurant')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="room-fallback">Boutique hotel restaurant</div>';
@@ -960,8 +960,8 @@ const HotelsPage = () => {
                   alt="Spa and wellness area"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/winery.jpg', 'Spa and wellness area')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="room-fallback">Spa and wellness area</div>';
@@ -979,8 +979,8 @@ const HotelsPage = () => {
                   alt="Hotel exterior at twilight"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hero-venue.jpg', 'Hotel exterior at twilight')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="room-fallback">Hotel exterior at twilight</div>';
@@ -1063,8 +1063,8 @@ const HotelsPage = () => {
                   alt="Luxury hotel room with four-poster bed"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hotel.jpg', 'Luxury hotel room with four-poster bed')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Luxury hotel room with four-poster bed</div>';
@@ -1077,8 +1077,8 @@ const HotelsPage = () => {
                   alt="Afternoon tea service"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/restaurant.jpg', 'Afternoon tea service')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Afternoon tea service</div>';
@@ -1091,8 +1091,8 @@ const HotelsPage = () => {
                   alt="Bathroom with freestanding bath"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/gastropub.jpg', 'Bathroom with freestanding bath')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Bathroom with freestanding bath</div>';
@@ -1105,8 +1105,8 @@ const HotelsPage = () => {
                   alt="Grand staircase"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/day.jpg', 'Grand staircase')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Grand staircase</div>';
@@ -1119,8 +1119,8 @@ const HotelsPage = () => {
                   alt="Garden terrace"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/winery.jpg', 'Garden terrace')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Garden terrace</div>';
@@ -1133,8 +1133,8 @@ const HotelsPage = () => {
                   alt="Library lounge"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/cafe.jpg', 'Library lounge')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Library lounge</div>';
@@ -1147,8 +1147,8 @@ const HotelsPage = () => {
                   alt="Hotel exterior at golden hour"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hero-venue.jpg', 'Hotel exterior at golden hour')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Hotel exterior at golden hour</div>';
@@ -1161,8 +1161,8 @@ const HotelsPage = () => {
                   alt="Breakfast spread"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/inn.jpg', 'Breakfast spread')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Breakfast spread</div>';
@@ -1175,8 +1175,8 @@ const HotelsPage = () => {
                   alt="Spa treatment room"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/restaurant.jpg', 'Spa treatment room')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Spa treatment room</div>';
@@ -1189,8 +1189,8 @@ const HotelsPage = () => {
                   alt="Cocktail bar"
                   style={{cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/winery.jpg', 'Cocktail bar')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Cocktail bar</div>';
@@ -1296,14 +1296,14 @@ const HotelsPage = () => {
                     cursor: 'pointer'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.background = '#6b5a45'
-                    e.target.style.transform = 'translateY(-2px)'
-                    e.target.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)'
+                    (e.target as HTMLElement).style.background = '#6b5a45';
+                    (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+                    (e.target as HTMLElement).style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.background = '#8b7355'
-                    e.target.style.transform = 'translateY(0)'
-                    e.target.style.boxShadow = 'none'
+                    (e.target as HTMLElement).style.background = '#8b7355';
+                    (e.target as HTMLElement).style.transform = 'translateY(0)';
+                    (e.target as HTMLElement).style.boxShadow = 'none';
                   }}
                 >
                   Start a Conversation
@@ -1372,10 +1372,10 @@ const HotelsPage = () => {
                 transition: 'background 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.2)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent'
+                (e.target as HTMLElement).style.background = 'transparent';
               }}
             >
               ×

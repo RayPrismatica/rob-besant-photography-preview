@@ -135,10 +135,10 @@ const BlogPage = () => {
             }}
             onClick={() => openModal(blogPosts[0].image, 'Featured Article Image')}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.05)'
+              e.currentTarget.style.transform = 'scale(1.05)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)'
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
             Featured Article Image
@@ -240,12 +240,12 @@ const BlogPage = () => {
               cursor: 'pointer'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)'
-              e.currentTarget.style.boxShadow = '0 15px 35px rgba(0,0,0,0.12)'
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.boxShadow = '0 15px 35px rgba(0,0,0,0.12)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.08)'
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.08)';
             }}
             >
               <div
@@ -262,10 +262,10 @@ const BlogPage = () => {
                 }}
                 onClick={() => openModal(post.image, `Article Image ${post.id}`)}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'scale(1.05)'
+                  e.currentTarget.style.transform = 'scale(1.05)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'scale(1)'
+                  e.currentTarget.style.transform = 'scale(1)';
                 }}
               >
                 Article Image {post.id}
@@ -323,10 +323,10 @@ const BlogPage = () => {
                     transition: 'border-bottom 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.borderBottom = '1px solid #2c3e50'
+                    (e.target as HTMLElement).style.borderBottom = '1px solid #2c3e50';
                   }}
                   onMouseLeave={(e) => {
-                    (e.target as HTMLElement).style.borderBottom = '1px solid transparent'
+                    (e.target as HTMLElement).style.borderBottom = '1px solid transparent';
                   }}
                 >
                   Read More →
@@ -395,10 +395,10 @@ const BlogPage = () => {
               transition: 'background 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.target.style.background = '#d4b03a'
+              (e.target as HTMLElement).style.background = '#d4b03a';
             }}
             onMouseLeave={(e) => {
-              e.target.style.background = '#e8c547'
+              (e.target as HTMLElement).style.background = '#e8c547';
             }}
             >
               Subscribe
@@ -514,10 +514,10 @@ const BlogPage = () => {
                 transition: 'background 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.3)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.3)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.2)';
               }}
             >
               ×

@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 const GastropubsPage = () => {
-  const [modalImage, setModalImage] = useState(null)
+  const [modalImage, setModalImage] = useState<string | null>(null)
   const [modalAlt, setModalAlt] = useState('')
 
-  const openModal = (src, alt) => {
+  const openModal = (src: string, alt: string) => {
     setModalImage(src)
     setModalAlt(alt)
   }
@@ -415,8 +415,8 @@ const GastropubsPage = () => {
                   alt="Inviting gastropub Sunday roast with Yorkshire pudding and all the trimmings"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/gastropub.jpg', 'Inviting gastropub Sunday roast with Yorkshire pudding and all the trimmings')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.02)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Inviting gastropub Sunday roast with Yorkshire pudding and all the trimmings';
@@ -524,8 +524,8 @@ const GastropubsPage = () => {
                   alt="Perfect Sunday roast with Yorkshire pudding"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/gastropub.jpg', 'Perfect Sunday roast with Yorkshire pudding')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Perfect Sunday roast with Yorkshire pudding';
@@ -538,8 +538,8 @@ const GastropubsPage = () => {
                   alt="Cosy pub interior with roaring fire"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hero-venue.jpg', 'Cosy pub interior with roaring fire')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Cosy pub interior with roaring fire';
@@ -552,8 +552,8 @@ const GastropubsPage = () => {
                   alt="Craft beer and gourmet burger"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/restaurant.jpg', 'Craft beer and gourmet burger')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Craft beer and gourmet burger';
@@ -566,8 +566,8 @@ const GastropubsPage = () => {
                   alt="Chef plating signature dish"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/day.jpg', 'Chef plating signature dish')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Chef plating signature dish';
@@ -580,8 +580,8 @@ const GastropubsPage = () => {
                   alt="Atmospheric evening exterior shot"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/inn.jpg', 'Atmospheric evening exterior shot')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Atmospheric evening exterior shot';
@@ -594,8 +594,8 @@ const GastropubsPage = () => {
                   alt="Fresh ingredients and daily specials board"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/cafe.jpg', 'Fresh ingredients and daily specials board')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Fresh ingredients and daily specials board';
@@ -608,8 +608,8 @@ const GastropubsPage = () => {
                   alt="Sticky toffee pudding with custard"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hotel.jpg', 'Sticky toffee pudding with custard')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Sticky toffee pudding with custard';
@@ -622,8 +622,8 @@ const GastropubsPage = () => {
                   alt="Busy Sunday service with happy diners"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/winery.jpg', 'Busy Sunday service with happy diners')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Busy Sunday service with happy diners';
@@ -658,12 +658,12 @@ const GastropubsPage = () => {
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.transform = 'translateY(-2px)'
-                  e.target.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)'
+                  (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+                  (e.target as HTMLElement).style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = 'none'
+                  (e.target as HTMLElement).style.transform = 'translateY(0)';
+                  (e.target as HTMLElement).style.boxShadow = 'none';
                 }}
               >
                 Let's Discuss Your Pub
@@ -732,10 +732,10 @@ const GastropubsPage = () => {
                 transition: 'background 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.2)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent'
+                (e.target as HTMLElement).style.background = 'transparent';
               }}
             >
               ×

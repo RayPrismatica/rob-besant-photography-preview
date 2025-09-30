@@ -113,14 +113,14 @@ const CafesPage = () => {
               cursor: 'pointer'
             }}
             onMouseEnter={(e) => {
-              e.target.style.background = '#75614d'
-              e.target.style.transform = 'translateY(-2px)'
-              e.target.style.boxShadow = '0 5px 20px rgba(139, 115, 85, 0.3)'
+              (e.target as HTMLElement).style.background = '#75614d';
+              (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+              (e.target as HTMLElement).style.boxShadow = '0 5px 20px rgba(139, 115, 85, 0.3)';
             }}
             onMouseLeave={(e) => {
-              e.target.style.background = '#8b7355'
-              e.target.style.transform = 'translateY(0)'
-              e.target.style.boxShadow = 'none'
+              (e.target as HTMLElement).style.background = '#8b7355';
+              (e.target as HTMLElement).style.transform = 'translateY(0)';
+              (e.target as HTMLElement).style.boxShadow = 'none';
             }}
           >
             Let's Discuss Your Café
@@ -484,8 +484,8 @@ const CafesPage = () => {
                   objectFit: 'cover'
                 }}
                 onError={(e) => {
-                  e.target.style.display = 'none'
-                  e.target.nextSibling.style.display = 'flex'
+                  (e.target as HTMLElement).style.display = 'none';
+                  ((e.target as HTMLElement).nextSibling as HTMLElement).style.display = 'flex';
                 }}
               />
               <div style={{
@@ -662,14 +662,14 @@ const CafesPage = () => {
             cursor: 'pointer'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#75614d'
-            e.target.style.transform = 'translateY(-2px)'
-            e.target.style.boxShadow = '0 5px 20px rgba(139, 115, 85, 0.3)'
+            (e.target as HTMLElement).style.background = '#75614d';
+            (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+            (e.target as HTMLElement).style.boxShadow = '0 5px 20px rgba(139, 115, 85, 0.3)';
           }}
           onMouseLeave={(e) => {
-            e.target.style.background = '#8b7355'
-            e.target.style.transform = 'translateY(0)'
-            e.target.style.boxShadow = 'none'
+            (e.target as HTMLElement).style.background = '#8b7355';
+            (e.target as HTMLElement).style.transform = 'translateY(0)';
+            (e.target as HTMLElement).style.boxShadow = 'none';
           }}
         >
           Start a Conversation

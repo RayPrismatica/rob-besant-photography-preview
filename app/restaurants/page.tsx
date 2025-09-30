@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 const RestaurantsPage = () => {
-  const [modalImage, setModalImage] = useState(null)
+  const [modalImage, setModalImage] = useState<string | null>(null)
   const [modalAlt, setModalAlt] = useState('')
 
-  const openModal = (src, alt) => {
+  const openModal = (src: string, alt: string) => {
     setModalImage(src)
     setModalAlt(alt)
   }
@@ -693,8 +693,8 @@ const RestaurantsPage = () => {
                   alt="Chef plating signature dish with precision"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/day.jpg', 'Chef plating signature dish with precision')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = 'Chef plating signature dish with precision';
@@ -840,8 +840,8 @@ const RestaurantsPage = () => {
                   alt="Elegant fine dining plate with microgreens"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/restaurant.jpg', 'Elegant fine dining plate with microgreens')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Elegant fine dining plate with microgreens - The Modern Table</div>';
@@ -857,8 +857,8 @@ const RestaurantsPage = () => {
                   alt="Signature cocktail with dramatic smoke effect"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/winery.jpg', 'Signature cocktail with dramatic smoke effect')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Signature cocktail with dramatic smoke effect - Bar Noir</div>';
@@ -874,8 +874,8 @@ const RestaurantsPage = () => {
                   alt="Chef at work during service"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/day.jpg', 'Chef at work during service')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Chef at work during service - Friday night energy</div>';
@@ -891,8 +891,8 @@ const RestaurantsPage = () => {
                   alt="Seasonal dessert with fresh berries"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/gastropub.jpg', 'Seasonal dessert with fresh berries')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Seasonal dessert with fresh berries - Summer special</div>';
@@ -908,8 +908,8 @@ const RestaurantsPage = () => {
                   alt="Restaurant interior at golden hour"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hero-venue.jpg', 'Restaurant interior at golden hour')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Restaurant interior at golden hour - Perfect ambience</div>';
@@ -925,8 +925,8 @@ const RestaurantsPage = () => {
                   alt="Signature main course plating"
                   style={{width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer', transition: 'transform 0.3s ease'}}
                   onClick={() => openModal('/images/hotel.jpg', 'Signature main course plating')}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.transform = 'scale(1)'}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<div class="gallery-fallback">Signature main course plating - Rossi\'s lamb dish</div>';
@@ -1014,12 +1014,12 @@ const RestaurantsPage = () => {
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.transform = 'translateY(-2px)'
-                  e.target.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)'
+                  (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+                  (e.target as HTMLElement).style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = 'none'
+                  (e.target as HTMLElement).style.transform = 'translateY(0)';
+                  (e.target as HTMLElement).style.boxShadow = 'none';
                 }}
               >
                 Start a Conversation
@@ -1088,10 +1088,10 @@ const RestaurantsPage = () => {
                 transition: 'background 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+                (e.target as HTMLElement).style.background = 'rgba(255, 255, 255, 0.2)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent'
+                (e.target as HTMLElement).style.background = 'transparent';
               }}
             >
               ×
